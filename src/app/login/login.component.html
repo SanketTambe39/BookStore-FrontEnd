@@ -1,0 +1,15 @@
+<app-headers>Welcome to Book Store</app-headers>
+<form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+    <div class="group">
+        <input type="text" formControlName="email"><span class="highlight"></span><span class="bar"></span>
+        <label>Email Id</label>
+    </div>
+    <div class="group">
+        <input type="password" formControlName="password"><span class="highlight"></span><span class="bar"></span>
+        <label>Password</label>
+    </div>
+    <button type="submit" class="button buttonBlue">Log In
+        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+    </button>
+</form>
+<app-footer></app-footer>

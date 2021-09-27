@@ -1,0 +1,34 @@
+<mat-toolbar class="header">
+    <mat-toolbar-row>
+        <img src="../../assets/education.svg">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">Book</mat-icon>
+        <span routerLink="../dashboard" style="cursor: grab;">bookstore</span>
+        <span [formGroup]="header" class="input-feild">
+            <div class="search">
+                <span class="fa fa-search"></span>
+                <input placeholder="Search">
+            </div>
+        </span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button #tooltip="matTooltip" matTooltip="wishlist">
+            <mat-icon matBadge="{{list}}" matBadgeColor="warn" routerLink="list">favorite_border</mat-icon>
+        </button>
+        <button mat-icon-button #tooltip="matTooltip" matTooltip="cart" class="bag">
+            <!-- <app-mycart (count)={{bag}}></app-mycart> -->
+            <mat-icon matBadge="{{childMessage}}" matBadgeColor="warn" routerLink="../cart">shopping_cart</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+
+
+<!-- <mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Third Line</span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+      </mat-toolbar-row>
+</mat-toolbar> -->
